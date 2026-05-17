@@ -7,6 +7,72 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
+		<div class="Header">
+			<img src="./images/Logo_Gremio.jpg" alt="Logo Gremio CEFET MG" id="Logo" />
+			<h1>Gremio Estudantil CEFET-MG</h1>
+			<ul class="ItemList">
+				<li><a href="/eventos" class="HeaderLink">Eventos</a></li>
+				<li><a href="/contas" class="HeaderLink">Contas</a></li>
+				<li><a href="/aluta" class="HeaderLink">A luta</a></li>
+			</ul>
+
+			<button id="Hambuguer">H</button>
+		</div>
+
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+	body {
+		margin: 0px;
+		width: 100dvw;
+		height: 100dvh;
+		background-color: var(--background-Color);
+	}
+	* {
+		font-family: 'IM Fell French Canon', serif;
+		font-weight: 400;
+		font-style: normal;
+		--background-Color: rgb(255, 255, 240);
+		--Red-Accent: rgb(184, 5, 0);
+		--Blue-Accent: rgb(24, 115, 184);
+		--Deep-Blue-Accent: rgb(13, 63, 101);
+	}
+	.Header {
+		width: 100vw;
+		height: 10vh;
+		background-color: var(--Deep-Blue-Accent);
+		position: sticky;
+		top: 0px;
+		left: 0px;
+		display: grid;
+		grid-template-columns: 1fr 6fr 1fr;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.Header * {
+		color: var(--background-Color);
+		max-height: 10vh;
+	}
+	#Hambuguer {
+		background: none;
+		border: none;
+		width: 50px;
+		height: 50px;
+		grid-column: 3;
+		margin: auto;
+	}
+	.Info {
+		display: flex;
+		grid-column: 1;
+	}
+	#Logo {
+		width: 10vh;
+		height: 10vh;
+	}
+	.Title {
+		grid-column: 2;
+		margin: auto;
+	}
+</style>
