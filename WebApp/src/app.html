@@ -27,7 +27,7 @@
 	body {
 		margin: 0px;
 		width: 100dvw;
-		height: 100dvh;
+		height: fit-content;
 		background-color: var(--background-Color);
 	}
 	* {
@@ -38,6 +38,11 @@
 		--Red-Accent: rgb(184, 5, 0);
 		--Blue-Accent: rgb(24, 115, 184);
 		--Deep-Blue-Accent: rgb(13, 63, 101);
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+	*::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
 	}
 	.Header {
 		width: 100vw;
@@ -50,6 +55,7 @@
 		grid-template-columns: 1fr 6fr 1fr;
 		align-items: center;
 		justify-content: flex-start;
+		z-index: 10;
 	}
 	.Header * {
 		color: var(--background-Color);
@@ -74,5 +80,10 @@
 	.Title {
 		grid-column: 2;
 		margin: auto;
+	}
+	.pautas {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>

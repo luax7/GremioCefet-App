@@ -9,7 +9,7 @@
 
 <div class="MainContainer">
 	<section class="titleSection">
-		<h1>Gremio Estudantil Arnaldo Cardoso Rocha</h1>
+		<h1 id="Maintitle">Gremio Estudantil <br />Arnaldo Cardoso Rocha</h1>
 	</section>
 	<section class="about">
 		<div class="TextContainer">
@@ -27,8 +27,11 @@
 		</div>
 	</section>
 	<section class="pautas">
+		<h1 class="SectionTitle PautasTitle">Nossas Pautas</h1>
 		{#if ScreenWidth > 768}
+			<div class="DecBefore"></div>
 			<div class="Pautas"></div>
+			<div class="DecAfter"></div>
 		{/if}
 	</section>
 	<section class="participate">
@@ -45,33 +48,41 @@
 </div>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 	section {
 		width: 100dvw;
 		height: max-content;
-		margin-bottom: 5dvh;
+		margin-bottom: 20dvh;
 	}
 	.titleSection {
 		width: 100dvw;
-		background: url('./images/Tarifa0.webp');
+		background: url('./images/Tarifa0.png');
 		height: 50dvh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: center;
+		color: var(--Deep-Blue-Accent);
+		margin-bottom: 10dvh !important;
 	}
+	#Maintitle {
+		opacity: 100% !important;
+	}
+
 	.TextContainer {
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 	}
 	.SectionTitle {
 		color: var(--Red-Accent);
 		font-size: 4rem;
+		font-family: 'Lora', serif;
 	}
 	.MinorText {
 		font-size: 1.5rem;
 		padding-left: 2.5%;
-		font-family: 'Ubuntu', sans-serif !important;
+		font-family: 'IM Fell French Canon SC', serif !important;
 		font-weight: 300;
 		font-style: normal;
 	}
@@ -90,10 +101,31 @@
 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	}
 	.Pautas {
-		height: 70dvh;
-		width: 100dvw;
-		background: url('./images/G1Blue.png');
-		background-repeat: no-repeat;
-		background-size: contain;
+		height: 50dvw;
+		width: 100vw;
+		background: rgb(14 68 109);
+		background-repeat: repeat-x;
+		background-position: center;
+		position: relative;
+	}
+	/* TOPO */
+	.DecAfter {
+		width: 100%;
+		height: 80px;
+
+		background-image: url('./images/BluetornPaperSide.png');
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		rotate: 180deg;
+	}
+
+	/* BASE */
+	.DecBefore {
+		width: 100%;
+		height: 80px;
+
+		background-image: url('./images/BluetornPaperSide.png');
+		background-repeat: repeat-x;
+		background-size: auto 100%;
 	}
 </style>
