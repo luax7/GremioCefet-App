@@ -30,7 +30,44 @@
 		<h1 class="SectionTitle PautasTitle">Nossas Pautas</h1>
 		{#if ScreenWidth > 768}
 			<div class="DecBefore"></div>
-			<div class="Pautas"></div>
+			<div class="Pautas">
+				<div class="pauta">
+					<h1 class="pautaTitle">Recuperaçao paralela</h1>
+					<p class="MinorText">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lorem ut nunc
+						pretium fermentum sed sit amet ipsum. Morbi ultricies iaculis turpis id convallis.
+						Suspendisse pretium mattis urna, ac porttitor enim suscipit quis. Mauris nec enim nec
+						est commodo bibendum quis id libero. Praesent cursus sit amet lectus sit amet tristique.
+						Cras nec auctor ante. Aliquam a dolor id nunc ornare venenatis. Phasellus condimentum
+						sapien eget ligula semper, eu pulvinar nunc dignissim. Cras semper ante nec fermentum
+						bibendum. Aenean.
+					</p>
+				</div>
+				<div class="pauta">
+					<h1 class="pautaTitle">Recuperaçao paralela</h1>
+					<p class="MinorText">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lorem ut nunc
+						pretium fermentum sed sit amet ipsum. Morbi ultricies iaculis turpis id convallis.
+						Suspendisse pretium mattis urna, ac porttitor enim suscipit quis. Mauris nec enim nec
+						est commodo bibendum quis id libero. Praesent cursus sit amet lectus sit amet tristique.
+						Cras nec auctor ante. Aliquam a dolor id nunc ornare venenatis. Phasellus condimentum
+						sapien eget ligula semper, eu pulvinar nunc dignissim. Cras semper ante nec fermentum
+						bibendum. Aenean.
+					</p>
+				</div>
+				<div class="pauta">
+					<h1 class="pautaTitle">Recuperaçao paralela</h1>
+					<p class="MinorText">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lorem ut nunc
+						pretium fermentum sed sit amet ipsum. Morbi ultricies iaculis turpis id convallis.
+						Suspendisse pretium mattis urna, ac porttitor enim suscipit quis. Mauris nec enim nec
+						est commodo bibendum quis id libero. Praesent cursus sit amet lectus sit amet tristique.
+						Cras nec auctor ante. Aliquam a dolor id nunc ornare venenatis. Phasellus condimentum
+						sapien eget ligula semper, eu pulvinar nunc dignissim. Cras semper ante nec fermentum
+						bibendum. Aenean.
+					</p>
+				</div>
+			</div>
 			<div class="DecAfter"></div>
 		{/if}
 	</section>
@@ -50,7 +87,8 @@
 <style>
 	section {
 		width: 100dvw;
-		height: max-content;
+		height: fit-content;
+		max-height: 90vh;
 		margin-bottom: 20dvh;
 	}
 	.titleSection {
@@ -68,8 +106,15 @@
 	}
 	#Maintitle {
 		opacity: 100% !important;
+		text-align: center;
+		font-size: 5vw;
 	}
-
+	.Pautas {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 	.TextContainer {
 		width: 90%;
 		margin: 0 auto;
@@ -86,20 +131,7 @@
 		font-weight: 300;
 		font-style: normal;
 	}
-	.Ender {
-		height: 10dvh;
-		width: 100dvw;
-		position: sticky;
-		bottom: 0px;
-		left: 0px;
-		background: linear-gradient(
-			to bottom,
-			rgba(255, 255, 240, 0) 0%,
-			rgba(255, 255, 240, 0) 3%,
-			rgba(255, 255, 240, 1) 53%,
-			rgba(255, 255, 240, 1) 99%
-		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	}
+
 	.Pautas {
 		height: 50dvw;
 		width: 100vw;
@@ -107,25 +139,78 @@
 		background-repeat: repeat-x;
 		background-position: center;
 		position: relative;
+		height: fit-content;
 	}
 	/* TOPO */
 	.DecAfter {
 		width: 100%;
-		height: 80px;
+		height: 80px !important;
 
 		background-image: url('./images/BluetornPaperSide.png');
 		background-repeat: repeat-x;
-		background-size: auto 100%;
+		background-size: 100vw;
 		rotate: 180deg;
 	}
 
 	/* BASE */
 	.DecBefore {
 		width: 100%;
-		height: 80px;
+		height: 80px !important;
 
 		background-image: url('./images/BluetornPaperSide.png');
 		background-repeat: repeat-x;
-		background-size: auto 100%;
+		background-size: 100vw;
+	}
+
+	.pauta * {
+		color: var(--background-Color);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.pauta {
+		width: 33%;
+		margin-bottom: 0px;
+	}
+	.pautaTitle::after {
+		content: '';
+		display: block;
+		left: 5% !important;
+		width: 90%;
+		height: 2px;
+		background-color: var(--background-Color);
+	}
+
+	@media (max-width: 480px) {
+		.SectionTitle {
+			font-size: 10vw;
+		}
+		.Ender {
+			height: 10dvh;
+			width: 100dvw;
+			position: sticky;
+			bottom: 0px;
+			left: 0px;
+			background: linear-gradient(
+				to bottom,
+				rgba(255, 255, 240, 0) 0%,
+				rgba(255, 255, 240, 1) 99%
+			); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+	}
+	@media (max-width: 1000px) {
+		.pauta {
+			width: 100% !important;
+		}
+		section {
+			height: max-content !important;
+		}
+	}
+	@media (max-width: 1665px) {
+		.pauta {
+			width: 50%;
+		}
 	}
 </style>
